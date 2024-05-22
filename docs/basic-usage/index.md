@@ -1,6 +1,9 @@
 ---
+layout: page
 title: Basic Usage
 description: How to solve simple use-case scenarios
+hero_height: is-small
+menubar: result_docs
 ---
 
 # Basic Usage

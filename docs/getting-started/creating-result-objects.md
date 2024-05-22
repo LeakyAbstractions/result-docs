@@ -1,6 +1,9 @@
 ---
+layout: page
 title: Creating Result Objects
 description: How to instantiate new Result objects
+hero_height: is-small
+menubar: result_docs
 ---
 
 # Creating Results
