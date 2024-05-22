@@ -3,6 +3,7 @@ layout: page
 title: Result Library for Java
 subtitle: Handle success and failure without exceptions
 callouts: my_callouts
+showcase: my_showcase
 ---
 
 # Lorem Ipsum
