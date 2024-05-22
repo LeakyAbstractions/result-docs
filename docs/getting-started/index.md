@@ -1,4 +1,6 @@
 ---
+layout: page
+menubar: result_docs
 title: Getting Started
 description: How to start using Result in your own projects
 ---
