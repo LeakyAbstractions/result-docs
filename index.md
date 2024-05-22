@@ -2,6 +2,8 @@
 layout: page
 title: Result Library for Java
 subtitle: Handle success and failure without exceptions
+hero_link: /docs
+hero_link_text: Read the docs
 callouts: my_callouts
 showcase: result_showcase
 ---
