@@ -1,0 +1,11 @@
+intro: |-
+  This is some introduction text for the showcases.
+  
+  ## Example Heading
+  It can convert markdown format
+
+items:
+  - features_styles: is-centered is-outlined is-primary
+    image: https://raw.githubusercontent.com/LeakyAbstractions/result/main/docs/result-magic-ball.png
+    image_ratio: is-2by1
+    github: leakyabstractions/result
