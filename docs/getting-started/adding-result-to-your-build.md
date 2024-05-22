@@ -50,4 +50,13 @@ dependencies {
 }
 ```
 
-> For more information on when to use `api` and `implementation`, read the [Gradle documentation on API and implementation separation](https://docs.gradle.org/current/userguide/java\_library\_plugin.html#sec:java\_library\_separation).
+{% include
+  notification.html
+  status="is-info"
+  icon="fas fa-info-circle"
+  message="
+
+For more information on when to use `api` and `implementation`, read the
+[Gradle documentation on API and implementation separation](https://docs.gradle.org/current/userguide/java_library_plugin.html#sec:java_library_separation).
+
+" %}

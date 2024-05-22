@@ -19,3 +19,14 @@
           link: /docs/basic-usage/conditional-actions/
     - name: 🚀 Advanced Usage
       link: /docs/advanced-usage/
+      items:
+        - name: Screening Values
+          link: /docs/advanced-usage/screening-values/
+        - name: Transforming Values
+          link: /docs/advanced-usage/transforming-values/
+    - name: 🔔 Bells and Whistles
+      items:
+        - name: Library Performance
+          link: /docs/bells-and-whistles/benchmark/
+        - name: Lazy Results
+          link: /docs/bells-and-whistles/lazy-results/
