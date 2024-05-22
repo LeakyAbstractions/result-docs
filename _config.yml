@@ -8,6 +8,7 @@ show_sidebar: true
 fixed_navbar: top
 footer_menu: my_footer_menu
 menubar: my_menubar
+cookie_policy: cookies
 
 paginate: 5
 paginate_path: "/blog/page:num"
