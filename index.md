@@ -8,7 +8,7 @@ callouts: result_callouts
 showcase: result_showcase
 ---
 
-[![Latest Report][https://img.shields.io/endpoint?url=https://dev.leakyabstractions.com/result-benchmark/badge.json]][https://dev.leakyabstractions.com/result-benchmark/]
+> [![Latest Report][https://img.shields.io/endpoint?url=https://dev.leakyabstractions.com/result-benchmark/badge.json]][https://dev.leakyabstractions.com/result-benchmark/]
 
 # Lorem Ipsum
 
