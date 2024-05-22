@@ -11,4 +11,4 @@ If you like `Optional` but feel that it sometimes falls too short, you'll love `
 
 The best way to think of `Result` is as a super-powered version of `Optional`. The only difference is that whereas `Optional` may contain a successful value or express the absence of a value, `Result` contains either a successful value or a failure value that explains what went wrong.
 
-<figure><img src="../.gitbook/assets/getting-started.png" alt=""><figcaption><p>Don't return <code>null</code> or throw an exception: just return a <em>failed</em> result.</p></figcaption></figure>
+<figure><img src="../../assets/getting-started.png" alt=""><figcaption><p>Don't return <code>null</code> or throw an exception: just return a <em>failed</em> result.</p></figcaption></figure>
