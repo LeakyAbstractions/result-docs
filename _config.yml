@@ -12,7 +12,7 @@ menubar: my_menubar
 paginate: 5
 paginate_path: "/blog/page:num"
 
-title: Guillermo Calvo
+title: Result Library
 email: guillermo@guillermo.dev
-description: Guillermo Calvo - Obsidian
-repository: guillermocalvo/obsidian
+description: A Java library to handle success and failure without exceptions
+repository: leakyabstractions/result-docs
