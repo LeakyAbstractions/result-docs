@@ -1,5 +1,5 @@
 ---
-title: Page title
+title: Result Library Docs
 description: A Java library to handle success and failure without exceptions
 menubar: my_menubar
 ---
