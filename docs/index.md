@@ -1,7 +1,7 @@
 ---
 title: Page title
 description: A Java library to handle success and failure without exceptions
-menubar:
+menubar: my_menubar
 ---
 
 # Introduction
