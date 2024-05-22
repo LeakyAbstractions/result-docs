@@ -1,8 +1,8 @@
 ---
+layout: page
 title: Result Library Docs
 description: A Java library to handle success and failure without exceptions
 menubar: my_menubar
-layout: page
 ---
 
 # Introduction
