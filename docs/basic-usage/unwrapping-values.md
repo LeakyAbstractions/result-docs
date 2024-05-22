@@ -48,9 +48,17 @@ void get_failure() {
 }
 ```
 
-{% hint style="info" %}
-Note that, unlike [`Optional::get`](https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html#get--), these methods are null-safe. However, in practice, we will not be using them a lot, especially since there are more convenient ways to get the success value out of a result.
-{% endhint %}
+{% include notification.html
+  status="is-info"
+  icon="fas fa-info-circle"
+  message="
+
+Note that, unlike [`Optional::get`](https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html#get--),
+these methods are null-safe.
+However, in practice, we will not be using them a lot, especially since there are more convenient ways to get the success value out of a result.
+
+" %}
+
 
 ## Using Alternative Success Value
 
@@ -72,9 +80,10 @@ void get_success_or_an_alternative_value() {
 }
 ```
 
-{% hint style="info" %}
-Note that the alternative success value can be `null`.
-{% endhint %}
+{% include notification.html
+  status="is-info"
+  icon="fas fa-info-circle"
+  message="Note that the alternative success value can be `null`." %}
 
 ## Mapping Failure Value
 
@@ -99,9 +108,10 @@ void get_success_or_map_failure_value() {
 }
 ```
 
-{% hint style="info" %}
-Note that, although the mapping function may return `null`, it is not the best practice.
-{% endhint %}
+{% include notification.html
+  status="is-info"
+  icon="fas fa-info-circle"
+  message="Note that, although the mapping function may return `null`, it is not the best practice." %}
 
 ## Streaming Success/Failure Value
 

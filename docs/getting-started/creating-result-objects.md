@@ -25,9 +25,19 @@ void create_successful_result() {
 }
 ```
 
-{% hint style="info" %}
-Note that we can invoke [`Result::hasSuccess`](https://dev.leakyabstractions.com/result/javadoc/1.0.0.0/com/leakyabstractions/result/Result.html#hasSuccess--) or [`Result::hasFailure`](https://dev.leakyabstractions.com/result/javadoc/1.0.0.0/com/leakyabstractions/result/Result.html#hasFailure--) to check if a result is successful or failed.
-{% endhint %}
+{% include
+  notification.html
+  status="is-info"
+  icon="fas fa-info-circle"
+  message="
+
+Note that we can invoke
+[`Result::hasSuccess`](https://dev.leakyabstractions.com/result/javadoc/1.0.0.0/com/leakyabstractions/result/Result.html#hasSuccess--)
+or
+[`Result::hasFailure`](https://dev.leakyabstractions.com/result/javadoc/1.0.0.0/com/leakyabstractions/result/Result.html#hasFailure--)
+to check if a result is successful or failed.
+
+" %}
 
 ## Failed Results
 
