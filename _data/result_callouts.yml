@@ -1,0 +1,33 @@
+style: is-light
+height: is-medium
+items:
+
+  - title: Fast
+    icon: fa-tachometer-alt
+    description: >
+      Faster than throwing exceptions
+
+  - title: Simple
+    icon: fa-tint
+    description: >
+      No frills, easy to use
+
+  - title: Error Handling
+    icon: fa-bolt
+    description: >
+      Functional programming style
+
+  - title: Lightweight
+    icon: fa-feather-alt
+    description: >
+      No external dependencies
+
+  - title: Open Source
+    icon: fa-balance-scale
+    description: >
+      Licensed under Apache 2
+
+  - title: Java Library
+    icon: fa-mug-hot
+    description: >
+      JDK 8 and up
