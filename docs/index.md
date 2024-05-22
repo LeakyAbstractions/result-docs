@@ -13,13 +13,8 @@ If you like `Optional` but feel that it sometimes falls too short, you'll love `
 
 The best way to think of `Result` is as a super-powered version of `Optional`. The only difference is that whereas `Optional` may contain a successful value or express the absence of a value, `Result` contains either a successful value or a failure value that explains what went wrong.
 
-```
-{% tabs %}
-{% tab title="Result vs Optional" %}
 `Result` objects have methods equivalent to those in `Optional`, plus a few more to handle failure values.
-{% endtab %}
 
-{% tab title="Methods" %}
 | Optional          | Result            |
 | ----------------- | ----------------- |
 | `isPresent`       | `isSuccess`       |
@@ -43,9 +38,6 @@ The best way to think of `Result` is as a super-powered version of `Optional`. T
 | `flatMap`         | `flatMapSuccess`  |
 | `or`              | `flatMapFailure`  |
 |                   | `flatMap`         |
-{% endtab %}
-{% endtabs %}
-```
 
 ### Result Library in a Nutshell
 
