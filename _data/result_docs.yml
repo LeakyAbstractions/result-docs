@@ -1,15 +1,21 @@
-- label: Example Menu
-  items:
-    - name: Home
-      link: /
-    - name: Pages
-      link: #
+- items:
+    - name: Introduction
+      link: /docs
+    - name: 🌱 Getting Started
+      link: /docs/getting-started/
       items:
-        - name: Page With Sidebar 
-          link: /page-1/
-        - name: Page Without Sidebar
-          link: /page-2/
-        - name: Page With Menubar
-          link: /page-3/
-    - name: Blog
-      link: /blog/
+        - name: Adding Result to Your Build 
+          link: /docs/getting-started/adding-result-to-your-build/
+        - name: Creating Results
+          link: /docs/getting-started/creating-results/
+    - name: 🪴Basic Usage
+      link: /docs/basic-usage/
+      items:
+        - name: Checking Success or Failure
+          link: /docs/basic-usage/checking-success-or-failure/
+        - name: Unwrapping Values
+          link: /docs/basic-usage/unwrapping-values/
+        - name: Conditional Actions
+          link: /docs/basic-usage/conditional-actions/
+    - name: 🚀 Advanced Usage
+      link: /docs/advanced-usage/

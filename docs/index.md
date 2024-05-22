@@ -1,5 +1,6 @@
 ---
 layout: page
+hero_height: is-small
 title: Result Library Docs
 description: A Java library to handle success and failure without exceptions
 menubar: my_menubar
