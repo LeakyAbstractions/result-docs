@@ -1,0 +1,16 @@
+alignment: is-left
+style: is-boxed
+size: is-large
+items:
+  - name: Tabs
+    link: /foo/
+    icon: fa-smile-wink
+  - name: Sidebar
+    link: /bar/
+    icon: fa-square
+  - name: No Sidebar
+    link: /foobar/
+    icon: fa-ellipsis-v
+  - name: Menubar
+    link: /foo/
+    icon: fa-bars

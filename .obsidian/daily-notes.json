@@ -1,0 +1,5 @@
+{
+  "folder": "_posts",
+  "template": "_templates/post.md",
+  "format": "YYYY-MM-DD-\\t\\i\\t\\l\\e"
+}

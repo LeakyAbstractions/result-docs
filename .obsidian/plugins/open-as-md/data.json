@@ -1,0 +1,9 @@
+{
+  "mySetting": "yaml,yml,htm,html,scss,csstxt,json",
+  "mySettingArray": [
+    "yaml",
+    "yml",
+    "txt",
+    "json"
+  ]
+}

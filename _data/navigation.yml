@@ -1,0 +1,31 @@
+
+- name: Example
+  link: https://www.csrhymes.com/bulma-clean-theme/docs/
+  dropdown: 
+    - name: Hero
+      link: /hero/
+    - name: Showcase
+      link: /showcase/
+    - name: Tabs
+      link: /tabs/
+    - name: Callouts
+      link: /callouts/
+    - name: Page
+      link: /page/
+    - name: Page with TOC
+      link: /page-with-toc/
+    - name: Page with menubar
+      link: /page-with-menubar/
+    - name: Page with menubar-toc
+      link: /page-with-menubar-toc/
+    - name: Foo
+      link: /foo/
+    - name: Bar
+      link: /bar/
+    - name: Foobar
+      link: /foobar/
+- name: Blog
+  link: /blog/
+  dropdown: 
+    - name: Page 2
+      link: /page-2/

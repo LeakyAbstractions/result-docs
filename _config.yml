@@ -1,0 +1,18 @@
+theme: bulma-clean-theme
+
+permalink: pretty
+
+gh_sponsor: leakyabstractions
+
+show_sidebar: true
+fixed_navbar: top
+footer_menu: my_footer_menu
+menubar: my_menubar
+
+paginate: 5
+paginate_path: "/blog/page:num"
+
+title: Guillermo Calvo
+email: guillermo@guillermo.dev
+description: Guillermo Calvo - Obsidian
+repository: guillermocalvo/obsidian

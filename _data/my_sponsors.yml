@@ -1,0 +1,17 @@
+
+- tier_name: Platinum Sponsors
+  size: large
+  description: |-
+    This is the description for the Platinum Tier
+  sponsors:
+    - name: Dave McDave
+      profile: https://github.com/
+    - name: Sarah Lee-Cheesecake
+      profile: https://github.com/
+
+- tier_name: Gold Sponsors
+  description: |-
+    This is the description for the Gold Tier
+  sponsors:
+    - name: Dave McDave
+      profile: https://github.com/
