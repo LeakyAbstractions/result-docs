@@ -1,7 +1,8 @@
 ---
 layout: page
 title: Advanced Usage
-description: Advanced Usage
+subtitle: How to take `Result` objects to the next level
+description: How to take Result objects to the next level
 hero_height: is-small
 menubar: result_docs
 ---

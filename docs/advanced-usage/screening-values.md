@@ -1,7 +1,8 @@
 ---
 layout: page
-title: Filtering Values
-description: Rejecting success values based on a predefined rule
+title: Screening Values
+subtitle: Conditionally rejecting success values and accepting failure values
+description: Conditionally rejecting success values and accepting failure values
 hero_height: is-small
 menubar: result_docs
 ---

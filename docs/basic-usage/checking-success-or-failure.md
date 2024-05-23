@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Checking Success or Failure
+subtitle: How to find out if the operation succeded or failed
 description: How to find out if the operation succeded or failed
 hero_height: is-small
 menubar: result_docs

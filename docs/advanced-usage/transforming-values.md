@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Transforming Values
+subtitle: Transform values wrapped inside results
 description: Transform values wrapped inside results
 hero_height: is-small
 menubar: result_docs

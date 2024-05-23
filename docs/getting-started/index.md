@@ -1,8 +1,10 @@
 ---
 layout: page
-menubar: result_docs
 title: Getting Started
-description: How to start using Result in your own projects
+subtitle: How to get started with results
+description: How to get started with results
+hero_height: is-small
+menubar: result_docs
 ---
 
 # Getting Started

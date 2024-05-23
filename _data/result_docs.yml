@@ -1,14 +1,14 @@
 - items:
-    - name: Introduction
+    - name: "**Introduction**"
       link: /docs
-    - name: 🌱 Getting Started
+    - name: "🌱 **Getting Started**"
       link: /docs/getting-started/
       items:
         - name: Adding Result to Your Build 
           link: /docs/getting-started/adding-result-to-your-build/
         - name: Creating Results
           link: /docs/getting-started/creating-results/
-    - name: 🪴Basic Usage
+    - name: "🪴**Basic Usage**"
       link: /docs/basic-usage/
       items:
         - name: Checking Success or Failure
@@ -17,14 +17,14 @@
           link: /docs/basic-usage/unwrapping-values/
         - name: Conditional Actions
           link: /docs/basic-usage/conditional-actions/
-    - name: 🚀 Advanced Usage
+    - name: "🚀 **Advanced Usage**"
       link: /docs/advanced-usage/
       items:
         - name: Screening Values
           link: /docs/advanced-usage/screening-values/
         - name: Transforming Values
           link: /docs/advanced-usage/transforming-values/
-    - name: 🔔 Bells and Whistles
+    - name: "🔔 **Bells and Whistles**"
       items:
         - name: Library Performance
           link: /docs/bells-and-whistles/benchmark/

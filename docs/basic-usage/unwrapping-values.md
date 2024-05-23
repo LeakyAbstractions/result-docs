@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Unwrapping Values
+subtitle: How to get wrapped values out of Result objects
 description: How to get wrapped values out of Result objects
 hero_height: is-small
 menubar: result_docs
@@ -53,9 +54,7 @@ void get_failure() {
   icon="fas fa-info-circle"
   message="
 
-Note that, unlike [`Optional::get`](https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html#get--),
-these methods are null-safe.
-However, in practice, we will not be using them a lot, especially since there are more convenient ways to get the success value out of a result.
+> Note that, unlike [`Optional::get`](https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html#get--), these methods are null-safe. However, in practice, we will not be using them a lot, especially since there are more convenient ways to get the success value out of a result.
 
 " %}
 
@@ -83,7 +82,11 @@ void get_success_or_an_alternative_value() {
 {% include notification.html
   status="is-info"
   icon="fas fa-info-circle"
-  message="Note that the alternative success value can be `null`." %}
+  message="
+  
+  Note that the alternative success value can be `null`.
+  
+  " %}
 
 ## Mapping Failure Value
 
