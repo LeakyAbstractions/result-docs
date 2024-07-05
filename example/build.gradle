@@ -1,0 +1,26 @@
+
+plugins {
+    id 'application'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+}
+
+testing {
+    suites {
+        test {
+            useJUnitJupiter('5.10.3')
+        }
+    }
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
