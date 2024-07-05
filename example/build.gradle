@@ -8,7 +8,7 @@ repositories {
 }
 
 dependencies {
-
+    testImplementation("com.leakyabstractions:result:0.15.1.1")
 }
 
 testing {
