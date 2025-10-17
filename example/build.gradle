@@ -14,13 +14,7 @@ dependencies {
 testing {
     suites {
         test {
-            useJUnitJupiter('5.13.4')
+            useJUnitJupiter()
         }
-    }
-}
-
-java {
-    toolchain {
-        languageVersion = JavaLanguageVersion.of(25)
     }
 }
