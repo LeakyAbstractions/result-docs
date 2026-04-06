@@ -20,10 +20,11 @@
 
 ## Add-ons
 
-- [💤 Lazy Results](add-ons/lazy.md)
+- [🧩 Ecosystem](add-ons/ecosystem.md)
 - [🗣️ Fluent Assertions](add-ons/assertj.md)
 - [📜 Jackson Module](add-ons/jackson.md)
 - [🧑‍🚀 Micronaut Serialization](add-ons/micronaut.md)
+- [💤 Lazy Results](add-ons/lazy.md)
 
 
 ## Other resources <a href="#extra" id="extra"></a>
