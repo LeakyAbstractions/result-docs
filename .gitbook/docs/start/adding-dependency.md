@@ -6,8 +6,86 @@ description: How to add Result as a dependency to your build
 
 This library adheres to [Pragmatic Versioning][PRAGVER] to communicate the backwards compatibility of each version.
 
-The latest releases are available in [Maven Central][RELEASES].
+The latest releases are available in [**Maven Central**][RELEASES].
 
+<p align="center">
+
+[![Maven Central logo][LOGO_MAVEN_CENTRAL]][RELEASES]
+
+</p>
+
+Result library supports both [**Maven**][MAVEN] and [**Gradle**][GRADLE] for seamless integration into your Java build
+workflow.
+
+<table data-card-size="large" data-view="cards">
+<thead>
+<tr>
+<th></th>
+<th align="center"></th>
+<th data-hidden data-card-target data-type="content-ref"></th>
+<th data-hidden data-card-cover data-type="image">Cover image</th>
+<th data-hidden data-card-cover-dark data-type="image">Cover image (dark)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+[**Apache Maven**][MAVEN] is a convention-based Java build tool that uses XML configuration to manage dependencies,
+compile code, and package applications in a standardized lifecycle.
+
+</td>
+<td align="center">
+
+### Works with <picture><source srcset="../../.gitbook/assets/logo-maven.dark.svg" media="(prefers-color-scheme: dark)"><img src="../../.gitbook/assets/logo-maven.svg" alt="Maven" data-size="line"></picture>
+
+</td>
+<td>
+
+[Maven](#maven)
+
+</td>
+<td data-object-fit="contain">
+
+[Cover image][LOGO_MAVEN]
+
+</td>
+<td>
+
+[Cover image dark][LOGO_MAVEN_DARK]
+
+</td>
+</tr>
+<tr>
+<td>
+
+[**Gradle**][GRADLE] is a flexible and high-performance build tool that uses a Groovy or Kotlin DSL to define builds,
+offering advanced customization and fast incremental builds.
+
+</td>
+<td align="center">
+
+### Works with <picture><source srcset="../../.gitbook/assets/logo-gradle.dark.svg" media="(prefers-color-scheme: dark)"><img src="../../.gitbook/assets/logo-gradle.svg" alt="Gradle" data-size="line"></picture>
+
+</td>
+<td>
+
+[Gradle](#gradle)
+
+</td>
+<td data-object-fit="contain">
+
+[Cover image][LOGO_GRADLE]
+
+</td>
+<td>
+
+[Cover image dark][LOGO_GRADLE_DARK]
+
+</td>
+</tr>
+</tbody>
+</table>
 
 ## Artifact Coordinates
 
@@ -66,6 +144,11 @@ correct dependencies, you're now ready to start leveraging the power of Results 
 [GRADLE]:                       https://gradle.org/
 [GRADLE_API_CONFIG]:            https://docs.gradle.org/current/userguide/java_library_plugin.html#sec:java_library_separation
 [LATEST]:                       https://img.shields.io/endpoint?url=https://dev.leakyabstractions.com/result/latest.json
+[LOGO_GRADLE]:                  ../../.gitbook/assets/logo-gradle.svg
+[LOGO_GRADLE_DARK]:             ../../.gitbook/assets/logo-gradle.dark.svg
+[LOGO_MAVEN]:                   ../../.gitbook/assets/logo-maven.svg
+[LOGO_MAVEN_CENTRAL]:           ../../.gitbook/assets/logo-maven-central.svg
+[LOGO_MAVEN_DARK]:              ../../.gitbook/assets/logo-maven.dark.svg
 [MAVEN]:                        https://maven.apache.org/
 [PRAGVER]:                      https://pragver.github.io/
 [RELEASES]:                     https://central.sonatype.com/artifact/com.leakyabstractions/result/
