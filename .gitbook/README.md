@@ -145,6 +145,50 @@ multi-threaded applications, ensuring predictability and eliminating side effect
 {% endhint %}
 
 
+### Demo Projects
+
+Try Result in 5 minutes.
+
+<table data-card-size="large" data-view="cards">
+<thead>
+<tr>
+<th align="center"></th>
+<th data-hidden data-card-target data-type="content-ref"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">
+
+**Works with**
+
+<img src=".gitbook/assets/logo-spring.svg" alt="Spring Boot" data-size="original">
+
+</td>
+<td>
+
+[Spring Boot Demo](extra/demo/spring-boot.md)
+
+</td>
+</tr>
+<tr>
+<td align="center">
+
+**Works with**
+
+<picture><source srcset=".gitbook/assets/logo-micronaut.dark.svg" media="(prefers-color-scheme: dark)"><img src=".gitbook/assets/logo-micronaut.svg" alt="Micronaut" data-size="original"></picture>
+
+</td>
+<td>
+
+[Micronaut Demo](extra/demo/micronaut.md)
+
+</td>
+</tr>
+</tbody>
+</table>
+
+
 ### Why Results?
 
 <table data-view="cards">
