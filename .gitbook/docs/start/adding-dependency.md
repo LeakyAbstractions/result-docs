@@ -6,22 +6,14 @@ description: How to add Result as a dependency to your build
 
 This library adheres to [Pragmatic Versioning][PRAGVER] to communicate the backwards compatibility of each version.
 
-The latest releases are available in [**Maven Central**][RELEASES].
+The latest releases are available in [![Maven Central repository][LOGO_MAVEN_CENTRAL]][RELEASES]
 
-<p align="center">
-
-[![Maven Central logo][LOGO_MAVEN_CENTRAL]][RELEASES]
-
-</p>
-
-Result library supports both [**Maven**][MAVEN] and [**Gradle**][GRADLE] for seamless integration into your Java build
-workflow.
+Result supports both [**Maven**][MAVEN] and [**Gradle**][GRADLE] for seamless integration into your Java build workflow.
 
 <table data-card-size="large" data-view="cards">
 <thead>
 <tr>
 <th></th>
-<th align="center"></th>
 <th data-hidden data-card-target data-type="content-ref"></th>
 <th data-hidden data-card-cover data-type="image">Cover image</th>
 <th data-hidden data-card-cover-dark data-type="image">Cover image (dark)</th>
@@ -33,11 +25,6 @@ workflow.
 
 [**Apache Maven**][MAVEN] is a convention-based Java build tool that uses XML configuration to manage dependencies,
 compile code, and package applications in a standardized lifecycle.
-
-</td>
-<td align="center">
-
-### Works with <picture><source srcset="../../.gitbook/assets/logo-maven.dark.svg" media="(prefers-color-scheme: dark)"><img src="../../.gitbook/assets/logo-maven.svg" alt="Maven" data-size="line"></picture>
 
 </td>
 <td>
@@ -61,11 +48,6 @@ compile code, and package applications in a standardized lifecycle.
 
 [**Gradle**][GRADLE] is a flexible and high-performance build tool that uses a Groovy or Kotlin DSL to define builds,
 offering advanced customization and fast incremental builds.
-
-</td>
-<td align="center">
-
-### Works with <picture><source srcset="../../.gitbook/assets/logo-gradle.dark.svg" media="(prefers-color-scheme: dark)"><img src="../../.gitbook/assets/logo-gradle.svg" alt="Gradle" data-size="line"></picture>
 
 </td>
 <td>
@@ -104,7 +86,7 @@ Add this Maven dependency to your build:
 
 ## Maven
 
-To use `Result`, we can add a [**Maven**][MAVEN] dependency to our project.
+Add Result as a Maven dependency to your project.
 
 ```xml
 <dependencies>
@@ -119,7 +101,7 @@ To use `Result`, we can add a [**Maven**][MAVEN] dependency to our project.
 
 ## Gradle
 
-We can also add `Result` as a [**Gradle**][GRADLE] dependency.
+Add Result as a Gradle dependency to your project.
 
 ```groovy
 dependencies {
@@ -129,16 +111,16 @@ dependencies {
 
 {% hint style="info" %}
 
-This is the most common configuration for projects using `Result` internally. If we were building a library that exposed
-`Result` in its public API, [we should use `api` instead of `implementation`][GRADLE_API_CONFIG].
+This is the most common configuration for projects using Result internally. If we were building a library that exposed
+Result in its public API, [we should use `api` instead of `implementation`][GRADLE_API_CONFIG].
 
 {% endhint %}
 
 
 ## Conclusion
 
-We learned how to add the library to your project using either [Maven][MAVEN] or [Gradle][GRADLE]. By including the
-correct dependencies, you're now ready to start leveraging the power of Results in your applications.
+We learned how to add the library to your project using either Maven or Gradle. By including the correct dependencies,
+you're now ready to start leveraging the power of Results in your applications.
 
 
 [GRADLE]:                       https://gradle.org/

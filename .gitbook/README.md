@@ -37,6 +37,72 @@ and failure can be represented by whatever types make the most sense for each op
 {% endhint %}
 
 
+### Latest Releases
+
+Available in [![Maven Central repository](.gitbook/assets/logo-maven-central.svg)](https://central.sonatype.com/artifact/com.leakyabstractions/result/)
+
+<table data-card-size="large" data-view="cards" data-full-width="false">
+<thead>
+<tr>
+<th align="center"></th>
+<th data-hidden data-card-target data-type="content-ref"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">
+
+**Works with**
+
+<picture><source srcset=".gitbook/assets/logo-maven.dark.svg" media="(prefers-color-scheme: dark)"><img src=".gitbook/assets/logo-maven.svg" alt="Maven" data-size="original"></picture>
+
+</td>
+<td>
+
+[Maven](docs/start/adding-dependency.md#maven)
+
+</td>
+</tr>
+<tr>
+<td align="center">
+
+**Works with**
+
+<picture><source srcset=".gitbook/assets/logo-gradle.dark.svg" media="(prefers-color-scheme: dark)"><img src=".gitbook/assets/logo-gradle.svg" alt="Gradle" data-size="original"></picture>
+
+</td>
+<td>
+
+[Gradle](docs/start/adding-dependency.md#gradle)
+
+</td>
+</tr>
+</tbody>
+</table>
+
+{% tabs %}
+{% tab title="Maven" %}
+```xml
+<dependencies>
+    <dependency>
+        <groupId>com.leakyabstractions</groupId>
+        <artifactId>result</artifactId>
+        <version>1.0.0.0</version>
+    </dependency>
+</dependencies>
+```
+{% endtab %}
+
+{% tab title="Gradle" %}
+```groovy
+dependencies {
+    implementation("com.leakyabstractions:result:1.0.0.0")
+}
+```
+{% endtab %}
+{% endtabs %}
+
+
 ### Results in a Nutshell
 
 In Java, methods that can fail typically do so by throwing exceptions. Then, exception-throwing methods are called from
