@@ -1,32 +1,48 @@
 ---
-description: How to serialize Result objects with Jackson
+description: How to serialize Result objects with Jackson 2.x and 3.x
 ---
 
-# Jackson Module
+# Jackson Datatype Modules for Result
 
-When using Result objects with [Jackson][JACKSON] we might run into some problems. The
-[Jackson datatype module for Result][RESULT_JACKSON] solves them by making Jackson treat results as if they were
-ordinary objects.
+When using Result objects with [**Jackson**][JACKSON] we might run into some problems. The Jackson datatype modules for
+Result solve them by making Jackson treat results as if they were ordinary objects.
 
 {% hint style="info" %}
 
-[Jackson][JACKSON] is a Java library for [JSON] parsing and generation. It is widely used for converting Java objects to
-JSON and vice versa, making it essential for handling data in web services and RESTful APIs.
+[**Jackson**][JACKSON] is a Java library for [JSON] parsing and generation. It is widely used for converting Java
+objects to JSON and vice versa, making it essential for handling data in web services and RESTful APIs.
 
 {% endhint %}
 
 
-## How to Use this Add-On
+## How to Use These Add-Ons
+
+Choose the Maven dependency that matches your Jackson version.
+
+
+### Jackson 2.x
 
 Add this Maven dependency to your build:
 
-| Group ID                | Artifact ID      | Latest Version |
-|-------------------------|------------------|----------------|
-| `com.leakyabstractions` | `result-jackson` | ![][LATEST]    |
+| Group ID                | Artifact ID       | Latest Version                |
+|-------------------------|-------------------|-------------------------------|
+| `com.leakyabstractions` | `result-jackson`  | ![][LATEST_RESULT_JACKSON]    |
+
+
+### Jackson 3.x
+
+Add this one instead:
+
+| Group ID                | Artifact ID       | Latest Version                 |
+|-------------------------|-------------------|--------------------------------|
+| `com.leakyabstractions` | `result-jackson3` | ![][LATEST_RESULT_JACKSON3]    |
 
 {% hint style="success" %}
 
-[Maven Central][RELEASES] provides snippets for different build tools to declare this dependency.
+Maven Central provides snippets for different build tools to declare these dependencies.
+
+- [Jackson 2.x datatype module for Result][RELEASES_RESULT_JACKSON]
+- [Jackson 3.x datatype module for Result][RELEASES_RESULT_JACKSON3]
 
 {% endhint %}
 
@@ -55,7 +71,7 @@ public class ApiResponse {
 Then we will take a look at what happens when we try to serialize and deserialize `ApiResponse` objects.
 
 
-### Serialization Problem
+### Serialization Problem (Jackson 2.x Only)
 
 Now, let's instantiate an `ApiResponse` object.
 
@@ -72,7 +88,7 @@ ObjectMapper objectMapper = new ObjectMapper();
 String json = objectMapper.writeValueAsString(response);
 ```
 
-We'll see that now we get an [`InvalidDefinitionException`][INVALID_DEFINITION_EXCEPTION].
+With Jackson 2.x, this will produce an error: [`InvalidDefinitionException`][INVALID_DEFINITION_EXCEPTION].
 
 ```
 Java 8 optional type `java.util.Optional<java.lang.String>`
@@ -81,38 +97,11 @@ Java 8 optional type `java.util.Optional<java.lang.String>`
  to enable handling
 ```
 
-While this may look strange, it's the expected behavior. When Jackson examined the result object, it invoked
-[`Result::getSuccess`][RESULT_GET_SUCCESS] and received an optional string value. But Jackson will not handle JDK 8
-datatypes like `Optional` unless you register [the appropriate modules][JACKSON_MODULES_JAVA8].
-
-```java
-@Test
-void testSerializationProblem() {
-  // Given
-  ApiResponse response = new ApiResponse("v1", success("Perfect"));
-  // Then
-  ObjectMapper objectMapper = new ObjectMapper();
-  InvalidDefinitionException error = assertThrows(InvalidDefinitionException.class,
-      () -> objectMapper.writeValueAsString(response));
-  assertTrue(error.getMessage().startsWith(
-      "Java 8 optional type `java.util.Optional<java.lang.String>` not supported"));
-}
-```
-
-This is Jackson's default serialization behavior. But we'd like to serialize the `result` field like this:
-
-```json
-{
-  "version": "v1",
-  "result": {
-    "failure": null,
-    "success": "Perfect"
-  }
-}
-```
+The reason is Jackson encounters `Optional` values internally and it will not handle it unless you register
+[the appropriate modules][JACKSON_MODULES_JAVA8].
 
 
-### Deserialization Problem
+### Deserialization Problem (Both Jackson 2.x and 3.x)
 
 Now, let's reverse our previous example, this time trying to deserialize a JSON object into an `ApiResponse`.
 
@@ -122,8 +111,7 @@ ObjectMapper objectMapper = new ObjectMapper();
 objectMapper.readValue(json, ApiResponse.class);
 ```
 
-We'll see that we get another [`InvalidDefinitionException`][INVALID_DEFINITION_EXCEPTION]. Let's inspect the stack
-trace.
+This will produce an error: [`InvalidDefinitionException`][INVALID_DEFINITION_EXCEPTION]. Let's inspect the stack trace.
 
 ```
 Cannot construct instance of `com.leakyabstractions.result.api.Result`
@@ -135,45 +123,56 @@ Cannot construct instance of `com.leakyabstractions.result.api.Result`
 This behavior again makes sense. Essentially, Jackson cannot create new result objects because `Result` is an interface,
 not a concrete type.
 
-```java
-@Test
-void testDeserializationProblem() {
-  // Given
-  String json = "{\"version\":\"v2\",\"result\":{\"success\":\"OK\"}}";
-  // Then
-  ObjectMapper objectMapper = new ObjectMapper();
-  InvalidDefinitionException error = assertThrows(InvalidDefinitionException.class,
-      () -> objectMapper.readValue(json, ApiResponse.class));
-  assertTrue(error.getMessage().startsWith(
-      "Cannot construct instance of `com.leakyabstractions.result.api.Result`"));
-}
-```
-
 
 ## Solution Implementation
 
-What we want, is for Jackson to treat `Result` values as JSON objects that contain either a `success` or a `failure`
-value. Fortunately, there's a Jackson module that can solve this problem.
+The Jackson datatype modules for Result provide serializers and deserializers so that Jackson treats results as if they
+were regular objects.
 
 
 ### Registering the Jackson Datatype Module for Result
 
-Once we have [added Result-Jackson as a dependency][ADD_DEPENDENCY], all we need to do is register `ResultModule` with
-our object mapper.
+First of all, we need to [add the the appropriate datatype module as a dependency][ADD_DEPENDENCY].
+
+
+#### Jackson 2.x
+
+Then, all we need to do is register `ResultModule` with our [object mapper][OBJECT_MAPPER].
 
 ```java
 ObjectMapper objectMapper = new ObjectMapper();
 objectMapper.registerModule(new ResultModule());
 ```
 
-Alternatively, you can also make Jackson auto-discover the module.
+Alternatively, you can also make Jackson 2.x auto-discover the module.
 
 ```java
 objectMapper.findAndRegisterModules();
 ```
 
-Regardless of the chosen registration mechanism, once the module is registered all functionality is available for all
-normal Jackson operations.
+
+#### Jackson 3.x
+
+Just like the previous example, we need to add `ResultModule` to our [JSON mapper][JSON_MAPPER].
+
+```java
+JsonMapper.Builder builder = JsonMapper.builder();
+builder.addModule(new ResultModule());
+ObjectMapper objectMapper = builder.build();
+```
+
+Or simply use auto-discovery:
+
+```java
+builder.findAndAddModules();
+```
+
+{% hint style="info" %}
+
+Regardless of the chosen registration mechanism, once the appropriate dataype module is registered all functionality is
+available for all normal Jackson operations.
+
+{% endhint %}
 
 
 ### Serializing Results
@@ -244,7 +243,7 @@ Now, let's repeat our tests for deserialization. If we read our `ApiResponse` ag
 
 ```java
 @Test
-void deserializeSuccessfulResult() throws Exception {
+void deserializeSuccessfulResult() {
   // Given
   String json = "{\"version\":\"v5\",\"result\":{\"success\":\"Yay\"}}";
   // When
@@ -261,7 +260,7 @@ exception, and in fact, have a failed result.
 
 ```java
 @Test
-void deserializeFailedResult() throws Exception {
+void deserializeFailedResult() {
   // Given
   String json = "{\"version\":\"v6\",\"result\":{\"failure\":\"Nay\"}}";
   // When
@@ -276,24 +275,32 @@ void deserializeFailedResult() throws Exception {
 
 ## Conclusion
 
-We learned how to serialize and deserialize Result objects using [Jackson][JACKSON], demonstrating how the provided
-datatype module enables Jackson to treat Results as ordinary objects.
+We learned how to serialize and deserialize Result objects using both **Jackson 2.x** and **Jackson 2.x**, demonstrating
+how the provided datatype module enables Jackson to treat Results as ordinary objects.
+
+The integration is nearly identical across versions; the main differences are limited to dependency coordinates and how
+the object mapper is constructed and configured.
 
 {% hint style="success" %}
 
-The full source code for the examples is [available on GitHub][EXAMPLES].
+The full source code for the examples is available on GitHub.
+
+- [Jackson 2.x examples][EXAMPLES_RESULT_JACKSON]
+- [Jackson 3.x examples][EXAMPLES_RESULT_JACKSON3]
 
 {% endhint %}
 
 
 [ADD_DEPENDENCY]:               #how-to-use-this-add-on
-[EXAMPLES]:                     https://github.com/LeakyAbstractions/result-jackson/tree/main/result-jackson/src/test/java/example
+[EXAMPLES_RESULT_JACKSON]:      https://github.com/LeakyAbstractions/result-jackson/tree/main/result-jackson/src/test/java/example
+[EXAMPLES_RESULT_JACKSON3]:     https://github.com/LeakyAbstractions/result-jackson3/tree/main/result-jackson3/src/test/java/example
 [INVALID_DEFINITION_EXCEPTION]: https://javadoc.io/static/com.fasterxml.jackson.core/jackson-databind/2.17.2/com/fasterxml/jackson/databind/exc/InvalidDefinitionException.html
-[JACKSON]:                      https://github.com/FasterXML/jackson
-[JACKSON_MODULES_JAVA8]:        https://github.com/FasterXML/jackson-modules-java8
+[JACKSON]:                      https://github.com/FasterXML/jackson/
+[JACKSON_MODULES_JAVA8]:        https://github.com/FasterXML/jackson-modules-java8/
 [JSON]:                         https://www.json.org/
-[LATEST]:                       https://img.shields.io/endpoint?url=https://dev.leakyabstractions.com/result-jackson/latest.json
+[JSON_MAPPER]:                  https://javadoc.io/static/tools.jackson.core/jackson-databind/3.0.0/tools.jackson.databind/tools/jackson/databind/json/JsonMapper.html
+[LATEST_RESULT_JACKSON]:        https://img.shields.io/endpoint?url=https://dev.leakyabstractions.com/result-jackson/latest.json
+[LATEST_RESULT_JACKSON3]:       https://img.shields.io/endpoint?url=https://dev.leakyabstractions.com/result-jackson3/latest.json
 [OBJECT_MAPPER]:                https://www.baeldung.com/jackson-object-mapper-tutorial
-[RELEASES]:                     https://central.sonatype.com/artifact/com.leakyabstractions/result-jackson/
-[RESULT_GET_SUCCESS]:           https://javadoc.io/doc/com.leakyabstractions/result-api/latest/com/leakyabstractions/result/api/Result.html#getSuccess--
-[RESULT_JACKSON]:               https://github.com/LeakyAbstractions/result-jackson/
+[RELEASES_RESULT_JACKSON]:      https://central.sonatype.com/artifact/com.leakyabstractions/result-jackson/
+[RELEASES_RESULT_JACKSON3]:     https://central.sonatype.com/artifact/com.leakyabstractions/result-jackson3/
