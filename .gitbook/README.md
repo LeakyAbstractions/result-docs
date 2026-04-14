@@ -1,6 +1,7 @@
 ---
 description: A Java library to handle success and failure without exceptions
 layout:
+  width: default
   title:
     visible: false
   description:
@@ -11,6 +12,10 @@ layout:
     visible: false
   pagination:
     visible: false
+  metadata:
+    visible: true
+  tags:
+    visible: true
 ---
 
 # Introduction
@@ -45,37 +50,20 @@ Available in [![Maven Central repository](.gitbook/assets/logo-maven-central.svg
 <thead>
 <tr>
 <th align="center"></th>
+<th align="center"></th>
 <th data-hidden data-card-target data-type="content-ref"></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="center">
-
-**Works with**
-
-<picture><source srcset=".gitbook/assets/logo-maven.dark.svg" media="(prefers-color-scheme: dark)"><img src=".gitbook/assets/logo-maven.svg" alt="Maven" data-size="original"></picture>
-
-</td>
-<td>
-
-[Maven](docs/start/adding-dependency.md#maven)
-
-</td>
+<td align="center"><strong>Works with</strong></td>
+<td align="center"><picture><source srcset=".gitbook/assets/logo-maven.dark.svg" media="(prefers-color-scheme: dark)"><img src=".gitbook/assets/logo-maven.svg" alt="Maven" data-size="original"></picture></td>
+<td><a href="docs/start/adding-dependency.md#maven">Maven</a></td>
 </tr>
 <tr>
-<td align="center">
-
-**Works with**
-
-<picture><source srcset=".gitbook/assets/logo-gradle.dark.svg" media="(prefers-color-scheme: dark)"><img src=".gitbook/assets/logo-gradle.svg" alt="Gradle" data-size="original"></picture>
-
-</td>
-<td>
-
-[Gradle](docs/start/adding-dependency.md#gradle)
-
-</td>
+<td align="center"><strong>Works with</strong></td>
+<td align="center"><picture><source srcset=".gitbook/assets/logo-gradle.dark.svg" media="(prefers-color-scheme: dark)"><img src=".gitbook/assets/logo-gradle.svg" alt="Gradle" data-size="original"></picture></td>
+<td><a href="docs/start/adding-dependency.md#gradle">Gradle</a></td>
 </tr>
 </tbody>
 </table>
@@ -153,37 +141,20 @@ Integrate Result with popular libraries.
 <thead>
 <tr>
 <th align="center"></th>
+<th align="center"></th>
 <th data-hidden data-card-target data-type="content-ref"></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="center">
-
-**Works with**
-
-<picture><source srcset=".gitbook/assets/logo-assertj.dark.svg" media="(prefers-color-scheme: dark)"><img src=".gitbook/assets/logo-assertj.svg" alt="AssertJ" data-size="original"></picture>
-
-</td>
-<td>
-
-[AssertJ](add-ons/assertj.md)
-
-</td>
+<td align="center"><strong>Assert results fluently with</strong></td>
+<td align="center"><picture><source srcset=".gitbook/assets/logo-assertj.dark.svg" media="(prefers-color-scheme: dark)"><img src=".gitbook/assets/logo-assertj.svg" alt="AssertJ" data-size="original"></picture></td>
+<td><a href="add-ons/assertj.md">AssertJ</a></td>
 </tr>
 <tr>
-<td align="center">
-
-**Works with**
-
-<picture><source srcset=".gitbook/assets/logo-jackson.dark.svg" media="(prefers-color-scheme: dark)"><img src=".gitbook/assets/logo-jackson.svg" alt="Jackson" data-size="original"></picture>
-
-</td>
-<td>
-
-[Jackson](add-ons/jackson.md)
-
-</td>
+<td align="center"><strong>Serialize results to JSON with</strong></td>
+<td align="center"><picture><source srcset=".gitbook/assets/logo-jackson.dark.svg" media="(prefers-color-scheme: dark)"><img src=".gitbook/assets/logo-jackson.svg" alt="Jackson" data-size="original"></picture></td>
+<td><a href="add-ons/jackson.md">Jackson</a></td>
 </tr>
 </tbody>
 </table>
@@ -197,37 +168,20 @@ Try Result in 5 minutes.
 <thead>
 <tr>
 <th align="center"></th>
+<th align="center"></th>
 <th data-hidden data-card-target data-type="content-ref"></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="center">
-
-**Works with**
-
-<img src=".gitbook/assets/logo-spring.svg" alt="Spring Boot" data-size="original">
-
-</td>
-<td>
-
-[Spring Boot Demo](extra/demo/spring-boot.md)
-
-</td>
+<td align="center"><strong>Works with</strong></td>
+<td align="center"><img src=".gitbook/assets/logo-spring.svg" alt="Spring Boot" data-size="original"></td>
+<td><a href="extra/demo/spring-boot.md">Spring Boot Demo</a></td>
 </tr>
 <tr>
-<td align="center">
-
-**Works with**
-
-<picture><source srcset=".gitbook/assets/logo-micronaut.dark.svg" media="(prefers-color-scheme: dark)"><img src=".gitbook/assets/logo-micronaut.svg" alt="Micronaut" data-size="original"></picture>
-
-</td>
-<td>
-
-[Micronaut Demo](extra/demo/micronaut.md)
-
-</td>
+<td align="center"><strong>Works with</strong></td>
+<td align="center"><picture><source srcset=".gitbook/assets/logo-micronaut.dark.svg" media="(prefers-color-scheme: dark)"><img src=".gitbook/assets/logo-micronaut.svg" alt="Micronaut" data-size="original"></picture></td>
+<td><a href="extra/demo/micronaut.md">Micronaut Demo</a></td>
 </tr>
 </tbody>
 </table>
