@@ -145,6 +145,50 @@ multi-threaded applications, ensuring predictability and eliminating side effect
 {% endhint %}
 
 
+### Add-Ons
+
+Integrate Result with popular libraries.
+
+<table data-card-size="large" data-view="cards">
+<thead>
+<tr>
+<th align="center"></th>
+<th data-hidden data-card-target data-type="content-ref"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">
+
+**Works with**
+
+<picture><source srcset=".gitbook/assets/logo-assertj.dark.svg" media="(prefers-color-scheme: dark)"><img src=".gitbook/assets/logo-assertj.svg" alt="AssertJ" data-size="original"></picture>
+
+</td>
+<td>
+
+[AssertJ](add-ons/assertj.md)
+
+</td>
+</tr>
+<tr>
+<td align="center">
+
+**Works with**
+
+<picture><source srcset=".gitbook/assets/logo-jackson.dark.svg" media="(prefers-color-scheme: dark)"><img src=".gitbook/assets/logo-jackson.svg" alt="Jackson" data-size="original"></picture>
+
+</td>
+<td>
+
+[Jackson](add-ons/jackson.md)
+
+</td>
+</tr>
+</tbody>
+</table>
+
+
 ### Demo Projects
 
 Try Result in 5 minutes.
