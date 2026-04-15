@@ -91,48 +91,6 @@ dependencies {
 {% endtabs %}
 
 
-### Results in a Nutshell
-
-In Java, methods that can fail typically do so by throwing exceptions. Then, exception-throwing methods are called from
-inside a `try` block to handle errors in a separate `catch` block.
-
-<div data-full-width="true">
-<img src=".gitbook/assets/using-exceptions.png" alt="Using Exceptions">
-</div>
-
-This approach is lengthy, and that's not the only problem — it's also very slow.
-
-{% hint style="info" %}
-
-Conventional wisdom says **exceptional logic shouldn't be used for normal program flow**. Results make us deal with
-expected error situations explicitly to enforce good practices and make our programs [run faster](extra/benchmarks.md).
-
-{% endhint %}
-
-Let's now look at how the above code could be refactored if `connect()` returned a `Result` object instead of throwing
-an exception.
-
-<div data-full-width="true">
-<img src=".gitbook/assets/using-results.png" alt="Using Results">
-</div>
-
-In the example above, we used only 4 lines of code to replace the 10 that worked for the first one. But we can
-effortlessly make it shorter by chaining methods. In fact, since we were returning `-1` just to signal that the
-underlying operation failed, we are better off returning a `Result` object upstream. This will allow us to compose
-operations on top of `getServerUptime()` just like we did with `connect()`.
-
-<div data-full-width="true">
-<img src=".gitbook/assets/embracing-results.png" alt="Embracing Results">
-</div>
-
-{% hint style="success" %}
-
-`Result` objects are immutable, providing thread safety without the need for synchronization. This makes them ideal for
-multi-threaded applications, ensuring predictability and eliminating side effects.
-
-{% endhint %}
-
-
 ### Add-Ons
 
 Integrate Result with popular libraries.

@@ -13,6 +13,8 @@ The best way to think of Results is as a super-powered version of Java's Optiona
 `Result` builds upon the familiar concept of `Optional`, enhancing it with the ability to represent both success and
 failure states.
 
+![No need to return null or throw an exception: just return a failed result.][GETTING_STARTED]
+
 {% tabs %}
 
 {% tab title="Why Results over Optionals?" %}
@@ -54,12 +56,48 @@ Results provide the same methods as Optionals, plus additional ones to handle fa
 
 {% endtabs %}
 
-![No need to return null or throw an exception: just return a failed result.][GETTING_STARTED]
-
 By leveraging Results, you can unleash a powerful tool for error handling that goes beyond the capabilities of
 traditional Optionals, leading to more robust and maintainable Java code.
 
 
+## Results in a Nutshell
+
+In Java, methods that can fail typically do so by throwing exceptions. Then, exception-throwing methods are called from
+inside a `try` block to handle errors in a separate `catch` block.
+
+![Using Exceptions][USING_EXCEPTIONS]
+
+This approach is lengthy, and that's not the only problem — it's also very slow.
+
+{% hint style="info" %}
+
+Conventional wisdom says **exceptional logic shouldn't be used for normal program flow**. Results make us deal with
+expected error situations explicitly to enforce good practices and make our programs [run faster][BENCHMARKS].
+
+{% endhint %}
+
+Let's now look at how the above code could be refactored if `connect()` returned a `Result` object instead of throwing
+an exception.
+
+![Using Results][USING_RESULTS]
+
+In the example above, we used only 4 lines of code to replace the 10 that worked for the first one. But we can
+effortlessly make it shorter by chaining methods. In fact, since we were returning `-1` just to signal that the
+underlying operation failed, we are better off returning a `Result` object upstream. This will allow us to compose
+operations on top of `getServerUptime()` just like we did with `connect()`.
+
+![Embracing Results][EMBRACING_RESULTS]
+
+{% hint style="success" %}
+
+`Result` objects are immutable, providing thread safety without the need for synchronization. This makes them ideal for
+multi-threaded applications, ensuring predictability and eliminating side effects.
+
+{% endhint %}
+
+
+[BENCHMARKS]:                   ../../extra/benchmarks.md
+[EMBRACING_RESULTS]:            ../../.gitbook/assets/embracing-results.png
 [GETTING_STARTED]:              ../../.gitbook/assets/getting-started.png
 [OPTIONAL]:                     https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Optional.html
 [OPTIONAL_FILTER]:              https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Optional.html#filter(java.util.function.Predicate)
@@ -94,3 +132,5 @@ traditional Optionals, leading to more robust and maintainable Java code.
 [RESULT_RECOVER]:               https://javadoc.io/doc/com.leakyabstractions/result-api/latest/com/leakyabstractions/result/api/Result.html#recover-java.util.function.Predicate-java.util.function.Function-
 [RESULT_STREAM_FAILURE]:        https://javadoc.io/doc/com.leakyabstractions/result-api/latest/com/leakyabstractions/result/api/Result.html#streamFailure--
 [RESULT_STREAM_SUCCESS]:        https://javadoc.io/doc/com.leakyabstractions/result-api/latest/com/leakyabstractions/result/api/Result.html#streamSuccess--
+[USING_EXCEPTIONS]:             ../../.gitbook/assets/using-exceptions.png
+[USING_RESULTS]:                ../../.gitbook/assets/using-results.png
