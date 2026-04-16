@@ -28,18 +28,58 @@ layout:
 Wave goodbye to slow exceptions and embrace clean, efficient error handling by encapsulating operations that may succeed
 or fail in a type-safe way.
 
+<a href="docs/start/" class="button primary" data-icon="rocket-launch">Start here</a>
+<a href="https://github.com/LeakyAbstractions/result" class="button secondary" data-icon="github">Fork me on GitHub</a>
+
+{% hint style="success" %}
+
+Result is a Java library for modeling operation outcomes explicitly. It gives you a simpler, faster alternative to
+exception-driven flow when you want to represent both success and failure in a single, composable type.
+
+{% endhint %}
+
+
+### Why Result?
+
+Optional is great for values that may be present or absent, but it does not explain **why** something is missing. Result
+fills that gap by carrying either a successful value or a failure reason, so your code can describe what happened
+instead of hiding it.
+
 <div data-full-width="true">
 <picture><source srcset=".gitbook/assets/mental-model.dark.svg" media="(prefers-color-scheme: dark)"><img src=".gitbook/assets/mental-model.svg" alt="Mental Model"></picture>
 </div>
 
 
-{% hint style="success" %}
+### Quick Start
 
-`Result` objects represent the outcome of an operation, removing the need to check for null. Operations that succeed
-produce results encapsulating a *success* value; operations that fail produce results with a *failure* value. Success
-and failure can be represented by whatever types make the most sense for each operation.
+{% stepper %}
+{% step %}
 
-{% endhint %}
+#### Create a result from an operation
+
+```java
+Result<User, Exception> result = Results.ofCallable(() -> db.getUser(id));
+```
+{% endstep %}
+
+{% step %}
+
+#### Inspect whether it succeeded or failed
+
+```java
+result.ifFailure(error -> logger.error("Couldn't get user: {}", id, error));
+```
+{% endstep %}
+
+{% step %}
+
+#### Transform it if needed, then unwrap it as required
+
+```java
+String name = result.mapSuccess(User::name).orElse("Anonymous");
+```
+{% endstep %}
+{% endstepper %}
 
 
 ### Latest Releases
@@ -120,7 +160,7 @@ Integrate Result with popular libraries.
 
 ### Demo Projects
 
-Try Result in 5 minutes.
+Try it for yourself in 5 minutes.
 
 <table data-card-size="large" data-view="cards">
 <thead>
@@ -145,7 +185,7 @@ Try Result in 5 minutes.
 </table>
 
 
-### Why Results?
+### Features
 
 <table data-view="cards">
 <thead>
