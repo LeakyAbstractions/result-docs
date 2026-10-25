@@ -69,7 +69,7 @@ See the License for the specific language governing permissions and limitations 
 [AUTHOR]:                       https://github.com/guillermocalvo/
 [BADGE_BENCHMARK]:              https://img.shields.io/endpoint?url=https://dev.leakyabstractions.com/result-benchmark/badge.json&style=flat
 [BADGE_BOOK]:                   https://img.shields.io/badge/Free_book-222?logo=leanpub
-[BADGE_BUILD_STATUS]:           https://github.com/leakyabstractions/result-docs/workflows/Build/badge.svg
+[BADGE_BUILD_STATUS]:           https://github.com/leakyabstractions/result-docs/workflows/Build/badge.svg?branch=develop
 [BENCHMARK]:                    https://dev.leakyabstractions.com/result-benchmark/
 [BOOK]:                         https://leanpub.com/result/
 [BUILD_STATUS]:                 https://github.com/LeakyAbstractions/result-docs/actions?query=workflow%3ABuild
